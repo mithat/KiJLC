@@ -134,7 +134,7 @@ class JLCSMTPlugin(pcbnew.ActionPlugin):
 
     def Run(self):
         board = pcbnew.GetBoard()
-        modules = board.GetModules()
+        modules = board.Footprints()
 
         fn = Path(board.GetFileName()).with_suffix("")
 
